@@ -31,6 +31,14 @@ body {
   clip-path: polygon(0 0, 100% 0,100% 80vh, 0 100%);
 }
 
+.logo {
+  height: 35px
+}
+
+/*.logo:hover {
+  animation:moveInTop is;
+}*/
+
 .text-box {
   position: absolute;
   top: 50%;
@@ -41,6 +49,7 @@ body {
 .heading-style {
   color:white;
   text-transform: uppercase;
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -48,12 +57,46 @@ body {
   font-size: 70px;
   font-weight: 300;
   letter-spacing: 20px;
+  -webkit-animation-name: moveInTop;
+  -o-animation-name: moveInTop;
+  animation-name: moveInTop;
+  -webkit-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  80% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 .heading.primary.sub {
   display: block;
   font-weight: 200;
   letter-spacing: 20px;
   font-size: 50px;
-
+  animation: moveInBottom 1s;
 }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  80% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
