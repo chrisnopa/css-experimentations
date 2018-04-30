@@ -20,7 +20,7 @@ body {
 
 .header {
   height: 99vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(177, 223, 215, 0.5), rgba(55, 113, 93, 0.4)), url(../img/astronomy.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
