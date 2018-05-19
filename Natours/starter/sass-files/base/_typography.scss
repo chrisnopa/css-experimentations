@@ -1,0 +1,47 @@
+.heading-primary {
+  color:white;
+  text-transform: uppercase;
+  // font-color: $color-primary;
+  backface-visibility:hidden;
+
+  &-main {
+    display: block;
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 20px;
+    -webkit-animation-name: moveInTop;
+    -o-animation-name: moveInTop;
+    animation-name: moveInTop;
+    -webkit-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+  &-sub {
+    display: block;
+    font-weight: lighter;
+    letter-spacing: 0px;
+    font-size: 35px;
+    animation: moveInBottom 1s;
+  }
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size:16px;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing:border-box;
+}
+
+
+.heading-secondary {
+  font-size:2.5rem;
+  text-transform:uppercase;
+  font-weight:500;
+  display:inline-block;
+  background-image:
+  linear-gradient(to right,red, #f06d06);
+  -webkit-background-clip: text;
+  color:transparent;
+  // background-image:linear-gradient(to right, $color-primary-light, $color-primary-dark)
+}

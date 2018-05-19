@@ -6,59 +6,23 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
-$color-primary: #55c57a;
-$color-primary-light:#B1DFD7;
-$color-primary-dark:#37715D;
-
-$color-white:#FFFFFF;
-$color-black:#000000;
+@import  'base/animations';
+@import  'base/base';
+@import  'base/typography';
+@import  'base/utilities';
 
 
-$grid-width:114rem;
+@import  'abstracts/functions';
+@import  'abstracts/mixins';
+@import  'abstracts/variables';
+
+@import 'layout/header';
+@import 'layout/grid';
+@import "pages/home";
+
+@import "components/button";
 
 
-
-
-
-* {
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size:16px;
-  line-height: 1.7;
-  padding: 0 25px;
-}
-
-
-.header {
-  height: 99vh;
-  background-image: linear-gradient(to right bottom, rgba($color-primary-light,0.5), rgba($color-primary-dark,0.4)), url(../img/astronomy.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0,100% 80vh, 0 100%);
-
-  &__logo-box {
-    height: 35px;
-  }
-
-  &__logo {
-    height:50px
-  }
-  &__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-}
 
 
 /*.logo:hover {
@@ -66,99 +30,19 @@ body {
 }*/
 
 
-.heading-primary {
-  color:white;
-  text-transform: uppercase;
-  font-color:$color-primary;
-  backface-visibility:hidden;
-
-  &-main {
-    display: block;
-    font-size: 70px;
-    font-weight: 300;
-    letter-spacing: 20px;
-    -webkit-animation-name: moveInTop;
-    -o-animation-name: moveInTop;
-    animation-name: moveInTop;
-    -webkit-animation-duration: 1s;
-    -o-animation-duration: 1s;
-    animation-duration: 1s;
-  }
-    &-sub {
-      display: block;
-      font-weight: lighter;
-      letter-spacing: 0px;
-      font-size: 35px;
-      animation: moveInBottom 1s;
-    }
-}
 
 
 
-@keyframes moveInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  80% {
-    transform: translateY(20px);
-  }
 
-  100% {
-    opacity: 1;
-  }
-}
+// .row {
+//   max-width: 114rem;
+//   background-color:$color-primary;
+//   margin: 0 auto;
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  80% {
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.btn:link,
-.btn:visited {
-  text-transform:uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  display:inline-block;
-  border-radius: 100px;
-  margin-top:20px;
-  transition: all .3s;
-}
-
-.btn-white {
-  background-color: #E7E9EB;
-  color:#1A1E21;
-  margin-bottom: 30px;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba($color-black,.2);
-}
-
-.btn:active {
-  transform:translateY(-1px);
-  box-shadow: 0 5px 10px rgba($color-black, .2);
-}
-
-.row {
-  max-width: $grid-width;
-  background-color:#8E7A7A;
-  margin: 0 auto;
-
-  &:not(last-child) {
-margin-bottom:80px
-  }
-}
+//   &:not(last-child) {
+// margin-bottom:80px
+//   }
+// }
 
 // .grid-test {
 //   max-width:114rem;

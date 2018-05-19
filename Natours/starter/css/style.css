@@ -6,43 +6,35 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); }
+  80% {
+    transform: translateY(20px); }
+  100% {
+    opacity: 1; } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  80% {
+    transform: translateY(20px); }
+  100% {
+    opacity: 1; } }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  padding: 0 25px; }
+  box-sizing: border-box; }
 
-.header {
-  height: 99vh;
-  background-image: linear-gradient(to right bottom, rgba(177, 223, 215, 0.5), rgba(55, 113, 93, 0.4)), url(../img/astronomy.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
-  .header__logo-box {
-    height: 35px; }
-  .header__logo {
-    height: 50px; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-/*.logo:hover {
-  animation:moveInTop is;
-}*/
 .heading-primary {
   color: white;
   text-transform: uppercase;
-  font-color: #55c57a;
   backface-visibility: hidden; }
   .heading-primary-main {
     display: block;
@@ -62,23 +54,73 @@ body {
     font-size: 35px;
     animation: moveInBottom 1s; }
 
-@keyframes moveInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px); }
-  80% {
-    transform: translateY(20px); }
-  100% {
-    opacity: 1; } }
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box; }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100px); }
-  80% {
-    transform: translateY(20px); }
-  100% {
-    opacity: 1; } }
+.heading-secondary {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  background-image: linear-gradient(to right, red, #f06d06);
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.header {
+  height: 99vh;
+  background-image: linear-gradient(to right bottom, rgba(177, 223, 215, 0.5), rgba(55, 113, 93, 0.4)), url(../img/astronomy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  .header__logo-box {
+    height: 35px; }
+  .header__logo {
+    height: 50px; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 60rem;
+  background-color: #EBEDEF;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 60px; }
+  .row .col-1-of-2 {
+    width: calc((100% - 60px) /2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 60px) /3); }
+  .row .col-2-of-3 {
+    width: calc(2*((100% - 2 * 60px) /3) + 60px); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 60px) /4); }
+  .row .col-2-of-4 {
+    width: calc(2* ((100% - 3 * 60px) /4) + 60px); }
+  .row .col-3-of-4 {
+    width: calc(3* ((100% - 3 * 60px) /4) + 2 * 60px); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -19vh; }
 
 .btn:link,
 .btn:visited {
@@ -103,9 +145,6 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
-.row {
-  max-width: 114rem;
-  background-color: #8E7A7A;
-  margin: 0 auto; }
-  .row:not(last-child) {
-    margin-bottom: 80px; }
+/*.logo:hover {
+  animation:moveInTop is;
+}*/
